@@ -9,7 +9,7 @@
         <div id="y">5</div>
         <div id="produto"></div>
         <div id="soma"></div>
-        <button id="calcular">CALCULAR!</button>
+        <button id="calcular">calcular!</button>
         <script>
             var x,y,produto,soma,botao;
             x=document.getElementById("x");
@@ -23,8 +23,8 @@
             botao.addEventListener("click",calcular);
 
             function calcular(){
-                soma.innerHTML="a soma de "+ x.innerHTML +" e "+ y.innerHTML +" é "+ (parseInt((x).innerHTML)+parseInt((y).innerHTML));
-                produto.innerHTML="o produto de "+x.innerHTML+" * "+y.innerHTML + " é " + x.innerHTML*y.innerHTML;
+                soma.innerHTML="a soma de "+ x.innerHTML +" e "+ y.innerHTML +" é "+ (parseInt((x).innerHTML)+parseInt((y).innerHTML))+"!";
+                produto.innerHTML="o produto de "+x.innerHTML+" e "+y.innerHTML + " é " + x.innerHTML*y.innerHTML+"!";
             }
 
         </script>
