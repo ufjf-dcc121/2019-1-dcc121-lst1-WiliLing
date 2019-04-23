@@ -20,6 +20,13 @@
             x.contentEditable=true;
             y.contentEditable=true;
 
+            botao.addEventListener("click",calcular);
+
+            function calcular(){
+                soma.innerHTML="a soma de "+ x.innerHTML +" e "+ y.innerHTML +" é "+ (parseInt((x).innerHTML)+parseInt((y).innerHTML));
+                produto.innerHTML="o produto de "+x.innerHTML+" * "+y.innerHTML + " é " + x.innerHTML*y.innerHTML;
+            }
+
         </script>
 </body>
 </html>
