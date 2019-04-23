@@ -5,18 +5,16 @@
     <title>Questao 10</title>
 </head>
 <body>
-    <p>
-        <p id="Fulano"></p>  
-    </p>
-    <p>
-        <p id="da Silva"></p>
-    </p>
-    <h1>
-        <p id="nomecompleto"></p>
-    </h1>
+        <p id="Nome">Wiliam</p>  
+        <d1 id="Sobrenome">Rocha</d1>
+        <h1 id="Nome Completo"></h1>
 
     <script>
-    
+    var nome, sobrenome, nomeCompleto;
+    nome=document.getElementById("Nome");
+    sobrenome=document.getElementById("Sobrenome");
+    nomeCompleto=document.getElementById("Nome Completo");
+    nomeCompleto.innerText="Bem vindo "+ nome.innerText+" "+sobrenome.innerText;
     </script>
 </body>
 </html>
