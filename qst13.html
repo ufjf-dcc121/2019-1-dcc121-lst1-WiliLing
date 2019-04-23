@@ -5,9 +5,14 @@
     <title>Questao 13</title>
 </head>
 <body>
-    <div id="Interativo"> </div>
+    <div id="Interativo">botão</div>
     <script>
-        
+        var Interativo = document.getElementById("Interativo");
+        Interativo.addEventListener("click", teste)
+
+        function teste(){
+            Interativo.innerText = "Funcionou!";
+        }
     </script>
 </body>
 </html>
