@@ -16,8 +16,8 @@
         y=document.getElementById("y");
         soma=document.getElementById("soma");
         produto=document.getElementById("produto");
-        soma.innerText="A soma de "+x.innerText+" e "+y.innerText+" é "+ parseInt(x.innerText)+parseInt(y.innerText);
-        produto.innerText="o produto de "+x.innerText+" e "+y.innerText+" é "+ parseInt(x.innerText)*parseInt(y.innerText);
+        soma.innerHTML="A soma de" + x.innerHTML+ " e " + y.innerHTML + " é " + (parseInt((x).innerHTML)+parseInt((y).innerHTML));
+        produto.innerText="o produto de "+x.innerText+" e "+y.innerText+" é "+ x.innerText*y.innerText;
     </script>
 </body>
 </html>
