@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Questao 15 </title>
 </head>
+
 <body>
     <main>
         <section>
             <h1>Resultado da Avaliação</h1>
         </section>
         <p>
-            Olá <span id="nome">Fulano</span>, você está matriculado há <span id="anos">2</span> anos no curso de Confeitaria e as notas das suas disciplinas são: <span id="nota1">70</span> em Confeitaria Básica;<span id="nota2">80</span> em Coberturas e <span id="nota3">60</span> em Broas e Bolos.
+            Olá <span id="nome">Fulano</span>, você está matriculado há <span id="anos">2</span> anos no curso de
+            Confeitaria e as notas das suas disciplinas são: <span id="nota1">70</span> em Confeitaria Básica;<span
+                id="nota2">80</span> em Coberturas e <span id="nota3">60</span> em Broas e Bolos.
         </p>
         <p id="Resultado"></p>
         <button id="avaliar"> Avaliar</button>
@@ -18,49 +22,50 @@
         <p id="Melhorias"></p>
     </main>
     <script>
-    var nome,anos, confeitaria, coberturas, bolos, botaoAvaliar, botaoLimpar, resultado, melhorias, media;
-    
-    //referencias;
-    nome=document.getElementById("nome");
-    anos=document.getElementById("anos");
-    confeitaria=document.getElementById("nota1");
-    bolos=document.getElementById("nota3");
-    coberturas=document.getElementById("nota2");
-    botaoAvaliar=document.getElementById("avaliar");
-    botaoLimpar=document.getElementById("limpar");
-    resultado=document.getElementById("Resultado");
-    melhorias=document.getElementById("Melhorias");
+        var nome, anos, confeitaria, coberturas, bolos, botaoAvaliar, botaoLimpar, resultado, melhorias, media;
 
-    //conteudoeditavel;
-    nome.contentEditable=true;
-    anos.contentEditable=true;
-    confeitaria.contentEditable=true;
-    coberturas.contentEditable=true;
-    bolos.contentEditable=true;
+        //referencias;
+        nome = document.getElementById("nome");
+        anos = document.getElementById("anos");
+        confeitaria = document.getElementById("nota1");
+        bolos = document.getElementById("nota3");
+        coberturas = document.getElementById("nota2");
+        botaoAvaliar = document.getElementById("avaliar");
+        botaoLimpar = document.getElementById("limpar");
+        resultado = document.getElementById("Resultado");
+        melhorias = document.getElementById("Melhorias");
 
-    botaoAvaliar.addEventListener("click",avaliarClick);
-    botaoLimpar.addEventListener("click",limparClick);
+        //conteudoeditavel;
+        nome.contentEditable = true;
+        anos.contentEditable = true;
+        confeitaria.contentEditable = true;
+        coberturas.contentEditable = true;
+        bolos.contentEditable = true;
 
-    function limparClick(){
-        resultado.textContent="";
-        melhorias.textContent="";
-    }
+        botaoAvaliar.addEventListener("click", avaliarClick);
+        botaoLimpar.addEventListener("click", limparClick);
 
-    function avaliarClick(){
-        //notasaux
-        var noConf=parseFloat(confeitaria.textContent);
-        var noCober=parseFloat(coberturas.textContent);
-        var noBolo=parseFloat(bolos.textContent);
+        function limparClick() {
+            resultado.textContent = "";
+            melhorias.textContent = "";
+        }
 
-        media=(noConf+noCober+noBolo)/3;
+        function avaliarClick() {
+            //notasaux
+            var noConf = parseFloat(confeitaria.textContent);
+            var noCober = parseFloat(coberturas.textContent);
+            var noBolo = parseFloat(bolos.textContent);
 
-        if (media >= 70) resultado.textContent="Parabéns"+nome.textContent+"! Você está aprovado com média"+ media+"!";
-        else resultado.textContent="Você está reprovado com a média "+media+"!";
+            media = (noConf + noCober + noBolo) / 3;
 
-        if(noConf<60) melhorias.innerHTML="<p>"+nome.textContent+",considere estudar mais Confeitaria!"+"</p>";
-        if(noCober<60)melhorias.innerHTML+="<p>"+nome.textContent+",considere estudar mais Coberturas!"+"</p>";
-        if(noBolo<60)melhorias.innerHTML+="<p>"+nome.textContent+",considere estudar mais Bolos!"+"</p>";
-    }
+            if (media >= 70) resultado.textContent = "Parabéns" + nome.textContent + "! Você está aprovado com média" + media + "!";
+            else resultado.textContent = "Você está reprovado com a média " + media + "!";
+
+            if (noConf < 60) melhorias.innerHTML = "<p>" + nome.textContent + ",considere estudar mais Confeitaria!" + "</p>";
+            if (noCober < 60) melhorias.innerHTML += "<p>" + nome.textContent + ",considere estudar mais Coberturas!" + "</p>";
+            if (noBolo < 60) melhorias.innerHTML += "<p>" + nome.textContent + ",considere estudar mais Bolos!" + "</p>";
+        }
     </script>
 </body>
+
 </html>
