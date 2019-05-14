@@ -37,7 +37,14 @@
     confeitaria.contentEditable=true;
     cobertura.contentEditable=true;
     bolos.contentEditable=true;
-    
+
+    botaoAvaliar.addEventListener("click",avaliarClick);
+    botaoLimpar.addEventListener("click",limparClick);
+
+    function limparClick(){
+        resultado.textContent="";
+        melhorias.textContent="";
+    }
     </script>
 </body>
 </html>
