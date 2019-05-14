@@ -35,7 +35,7 @@
     nome.contentEditable=true;
     anos.contentEditable=true;
     confeitaria.contentEditable=true;
-    cobertura.contentEditable=true;
+    coberturas.contentEditable=true;
     bolos.contentEditable=true;
 
     botaoAvaliar.addEventListener("click",avaliarClick);
@@ -44,6 +44,20 @@
     function limparClick(){
         resultado.textContent="";
         melhorias.textContent="";
+    }
+
+    function avaliarClick(){
+        //notasaux
+        var noConf=parseFloat(confeitaria.textContent);
+        var noCober=parseFloat(coberturas.textContent);
+        var noBolo=parseFloat(bolos.textContent);
+
+        media=(noConf+noCober+noBolo)/3;
+
+        if (media >= 70) resultado.textContent="Parabéns"+nome.textContent+"! Você está aprovado com média"+ media+"!";
+        else resultado.textContent="Você está reprovado com a média "+media+"!";
+
+
     }
     </script>
 </body>
