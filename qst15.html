@@ -57,7 +57,9 @@
         if (media >= 70) resultado.textContent="Parabéns"+nome.textContent+"! Você está aprovado com média"+ media+"!";
         else resultado.textContent="Você está reprovado com a média "+media+"!";
 
-
+        if(noConf<60) melhorias.innerHTML="<p>"+nome.textContent+",considere estudar mais Confeitaria!"+"</p>";
+        if(noCober<60)melhorias.innerHTML+="<p>"+nome.textContent+",considere estudar mais Coberturas!"+"</p>";
+        if(noBolo<60)melhorias.innerHTML+="<p>"+nome.textContent+",considere estudar mais Bolos!"+"</p>";
     }
     </script>
 </body>
